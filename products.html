@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>产品 — FUTURE VOICE</title>
+  <meta name="description" content="产品一览 — FUTURE VOICE（示例）" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="site-bg">
+<canvas id="bg-canvas" class="bg-canvas" aria-hidden="true"></canvas>
+
+<header>
+  <div class="container header-inner">
+    <div class="logo">
+      <!-- 同 index 的 Logo -->
+      <svg width="220" height="52" viewBox="0 0 360 90" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="mg" x1="0" x2="1"><stop offset="0" stop-color="#dce1e6"/><stop offset="1" stop-color="#aab3b9"/></linearGradient></defs><g transform="translate(6,12)"><path d="M8 36 C28 12,58 12,78 36 C98 60,128 60,148 36" stroke="url(#mg)" stroke-width="5" stroke-linecap="round" fill="none"/></g><g transform="translate(170,28)"><text x="0" y="24" font-family="Bebas Neue, Arial" font-size="22" fill="#e9f7f6">FUTURE VOICE</text></g></svg>
+    </div>
+    <nav class="nav">
+      <a href="index.html">首页</a>
+      <a href="products.html">产品</a>
+      <a href="index.html#about">关于</a>
+      <a href="index.html#contact">联系我们</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container" style="padding-top:24px;">
+  <h2 class="section-title">产品一览</h2>
+  <div class="products" role="list">
+    <div class="card" onclick="location.href='product-detail.html?id=1'" role="listitem" tabindex="0">
+      <img src="images/product1.jpg" alt="">
+      <div class="card-body"><h3>槽木吸音板</h3><p>高性能吸音板，外观与声学兼顾。</p></div>
+    </div>
+
+    <div class="card" onclick="location.href='product-detail.html?id=2'" role="listitem" tabindex="0">
+      <img src="images/product1.jpg" alt="">
+      <div class="card-body"><h3>聚酯纤维吸音板</h3><p>轻巧防潮，常用于办公与会议空间。</p></div>
+    </div>
+
+    <div class="card" onclick="location.href='product-detail.html?id=3'" role="listitem" tabindex="0">
+      <img src="images/product2.jpg" alt="">
+      <div class="card-body"><h3>穿孔木吸音板</h3><p>装饰性强、吸音可定制，适用于剧院/大厅。</p></div>
+    </div>
+
+    <div class="card" onclick="location.href='product-detail.html?id=4'" role="listitem" tabindex="0">
+      <img src="images/product2.jpg" alt="">
+      <div class="card-body"><h3>减振垫 / 隔振板</h3><p>工业与设备减振，提升整体舒适度。</p></div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container"><p>&copy; <span id="yr2"></span> FUTURE VOICE（示例）</p></div>
+</footer>
+
+<script>document.getElementById('yr2').textContent = new Date().getFullYear();</script>
+</body>
+</html>

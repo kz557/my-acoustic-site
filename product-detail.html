@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>产品详情 — FUTURE VOICE</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="site-bg">
+<canvas id="bg-canvas" class="bg-canvas" aria-hidden="true"></canvas>
+
+<header>
+  <div class="container header-inner">
+    <div class="logo">
+      <svg width="220" height="52" viewBox="0 0 360 90" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="mg2" x1="0" x2="1"><stop offset="0" stop-color="#dce1e6"/><stop offset="1" stop-color="#aab3b9"/></linearGradient></defs><g transform="translate(6,12)"><path d="M8 36 C28 12,58 12,78 36 C98 60,128 60,148 36" stroke="url(#mg2)" stroke-width="5" stroke-linecap="round" fill="none"/></g><g transform="translate(170,28)"><text x="0" y="24" font-family="Bebas Neue, Arial" font-size="22" fill="#e9f7f6">FUTURE VOICE</text></g></svg>
+    </div>
+    <nav class="nav">
+      <a href="index.html">首页</a>
+      <a href="products.html">产品</a>
+      <a href="index.html#contact">联系我们</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container" style="padding-top:20px;">
+  <div id="product-root"></div>
+</main>
+
+<footer>
+  <div class="container"><p>&copy; <span id="yr3"></span> FUTURE VOICE（示例）</p></div>
+</footer>
+
+<script>
+const products = {
+  "1": {
+    id:1,
+    name_zh:"槽木吸音板",
+    short:"高性能吸音，适合影院、会议厅，装饰与声学并重。",
+    imgs:["images/product1.jpg"],
+    specs:["材质：中密度纤维板/饰面多样","等级：环保 E1、可阻燃处理","用途：剧院 / 影院 / 会议厅"]
+  },
+  "2": {
+    id:2,
+    name_zh:"聚酯纤维吸音板",
+    short:"轻便、吸音效率高，适合办公和录音棚。",
+    imgs:["images/product1.jpg"],
+    specs:["材质：聚酯纤维热压成型","特性：防潮、易裁剪","用途：办公室 / 会议室 / 录音棚"]
+  },
+  "3": {
+    id:3,
+    name_zh:"穿孔木吸音板",
+    short:"装饰性强，可按孔径/图案定制。",
+    imgs:["images/product2.jpg"],
+    specs:["材质：天然木/多层板","可选孔径、图案","用途：音乐厅 / 酒店 / 大厅"]
+  },
+  "4": {
+    id:4,
+    name_zh:"减振垫 / 隔振板",
+    short:"用于机械与设备的减振，改善NVH性能。",
+    imgs:["images/product2.jpg"],
+    specs:["材质：橡胶/复合材料","用途：机械/设备/汽车 NVH"]
+  }
+};
+
+function param(name){
+  const u = new URL(location.href);
+  return u.searchParams.get(name);
+}
+const id = param('id') || '1';
+const p = products[id] || products['1'];
+document.getElementById('yr3').textContent = new Date().getFullYear();
+
+const root = document.getElementById('product-root');
+root.innerHTML = `
+  <div class="product-detail">
+    <div>
+      <div class="product-media"><img src="${p.imgs[0]}" alt="${p.name_zh}" style="width:100%;border-radius:8px;"/></div>
+      <div style="margin-top:14px;background:linear-gradient(180deg, rgba(8,8,10,0.6), rgba(4,4,6,0.5)); padding:14px; border-radius:8px; border:1px solid rgba(255,255,255,0.03);">
+        <h2 style="color:#1e90ff">${p.name_zh}</h2>
+        <p style="color:#dfe8ea">${p.short}</p>
+        <h4 style="color:#cfe6ea;margin-top:12px;">产品说明</h4>
+        <p style="color:#dfe8ea">示例说明：此处可放更详细的技术参数、安装说明与效果图。</p>
+      </div>
+    </div>
+    <aside>
+      <div class="product-meta">
+        <h3 style="color:#1e90ff">${p.name_zh}</h3>
+        <p style="color:#dfe8ea">${p.short}</p>
+        <h4 style="color:#cfe6ea;margin-top:10px;">规格 / 特性</h4>
+        <ul style="color:#dfe8ea;margin-left:16px;">
+          ${p.specs.map(s=>`<li>${s}</li>`).join('')}
+        </ul>
+        <div style="margin-top:12px;">
+          <a class="cta" href="mailto:info@example.com?subject=${encodeURIComponent(p.name_zh+' 询价')}">询价 / 見積依頼</a>
+        </div>
+      </div>
+      <div style="margin-top:12px;background:linear-gradient(180deg, rgba(8,8,10,0.6), rgba(4,4,6,0.5)); padding:12px; border-radius:8px; border:1px solid rgba(255,255,255,0.03);">
+        <strong>示例联系</strong><br/>
+        电话: 03-1234-5678<br/>地址: 東京都中央区銀座1-2-3
+      </div>
+    </aside>
+  </div>
+`;
+</script>
+</body>
+</html>
