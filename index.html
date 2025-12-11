@@ -1,174 +1,218 @@
-<!doctype html>
-<html lang="zh">
+<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>FUTURE VOICE — 专业声学 & 高端家用</title>
-  <meta name="description" content="FUTURE VOICE — 专业声学材料、吸音板、隔音解决方案。中/日双语示例站（冷银金属风）。" />
-  <!-- 引入样式（稍后我会发完整 style.css，请确保路径为 css/style.css） -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>某某声学科技有限公司｜サウンドアコースティック株式会社</title>
   <link rel="stylesheet" href="css/style.css" />
-  <!-- Swiper 轮播 -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <!-- AOS 动画样式 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+
 </head>
 <body>
 
-<!-- 顶部导航 -->
-<header class="site-header">
-  <div class="container header-inner">
-    <!-- Logo (冷银金属风 SVG) -->
-    <div class="logo" aria-hidden="false">
-      <svg width="220" height="56" viewBox="0 0 360 90" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="FUTURE VOICE">
-        <defs>
-          <linearGradient id="lg1" x1="0" x2="1">
-            <stop offset="0" stop-color="#e0e6eb"/>
-            <stop offset="1" stop-color="#c8d1da"/>
-          </linearGradient>
-          <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
-            <feGaussianBlur stdDeviation="2" result="b"/>
-            <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-          </filter>
-        </defs>
+  <!-- ========== Header ========== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <!-- Logo -->
+      <div class="logo">
+        <img src="images/logo.png" alt="Company Logo" onerror="this.style.display='none'"/>
+        <div class="logo-text">
+          <div class="cn">某某声学科技有限公司</div>
+          <div class="jp">サウンドアコースティック株式会社</div>
+        </div>
+      </div>
 
-        <!-- stylized wave -->
-        <g transform="translate(6,18)" opacity="0.95">
-          <path d="M8 36 C28 16,58 16,78 36 C98 56,128 56,148 36" stroke="url(#lg1)" stroke-width="5" stroke-linecap="round" fill="none" filter="url(#soft)"/>
-        </g>
-
-        <!-- title -->
-        <g transform="translate(170,28)">
-          <text x="0" y="22" font-family="Bebas Neue, Arial" font-size="22" fill="#1b2e40" font-weight="700">FUTURE VOICE</text>
-          <text x="0" y="40" font-family="Noto Sans JP, Arial" font-size="10" fill="#6b7884">未来の音、その手に。</text>
-        </g>
-      </svg>
-    </div>
-
-    <nav class="nav" role="navigation" aria-label="Main">
-      <a href="index.html" data-lang="nav_home">首页</a>
-      <a href="products.html" data-lang="nav_products">产品</a>
-      <a href="#about" data-lang="nav_about">关于</a>
-      <a href="#contact" data-lang="nav_contact">联系我们</a>
-    </nav>
-
-    <div class="controls">
-      <div class="lang-switch" role="group" aria-label="语言">
-        <button id="btn-zh" class="lang-btn">中文</button>
-        <button id="btn-jp" class="lang-btn">日本語</button>
+      <!-- Hotline -->
+      <div class="hotline">
+        日本咨询热线： <span class="hotline-number">03-1234-5678</span>
       </div>
     </div>
-  </div>
-</header>
+<div class="mobile-menu-btn" id="mobile-menu-btn">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+    <!-- Main navigation (白底 + 红风格，下拉菜单) -->
+    <nav>
+      <ul class="nav-bar">
+        <li><a href="index.html">首页</a></li>
 
-<!-- HERO -->
-<section class="hero" aria-labelledby="heroTitle">
-  <div class="container hero-inner">
-    <div class="hero-left">
-      <h1 id="heroTitle" data-lang="hero_title">让声音更有力量</h1>
-      <p class="lead" data-lang="hero_sub">舞台级性能 × 家用质感 — 吸音板 · 隔音 · 声学工程 一站式解决方案</p>
-      <div class="hero-ctas">
-        <a class="btn-primary" href="products.html" data-lang="cta_products">查看产品</a>
-        <a class="btn-outline" href="#contact" data-lang="cta_contact">咨询我们</a>
-      </div>
-      <ul class="hero-features" aria-hidden="false">
-        <li>专业声学设计与工程</li>
-        <li>定制化材料与阻燃等级可选</li>
-        <li>舞台、影院、办公、家庭影院解决方案</li>
+        <li class="dropdown">
+          <a href="#">声学设计</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">剧院声学</a></li>
+            <li><a href="#">会议室声学</a></li>
+            <li><a href="#">录音棚声学</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="products.html">声学产品</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">吸音板</a></li>
+            <li><a href="#">扩散体</a></li>
+            <li><a href="#">隔音材料</a></li>
+          </ul>
+        </li>
+
+        <li><a href="cases.html">工程案例</a></li>
+
+        <li class="dropdown">
+          <a href="news.html">资讯中心</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">新闻资讯</a></li>
+            <li><a href="#">行业动态</a></li>
+            <li><a href="#">常见问题</a></li>
+          </ul>
+        </li>
+
+        <li><a href="contact.html">联系我们</a></li>
+        <li><a href="#">EN</a></li>
       </ul>
+    </nav>
+  </header>
+
+  <!-- ========== Banner ========== -->
+  <section class="banner" data-aos="fade-up">
+    <div class="banner-text">
+      <h1>专业声学设计 · 吸音材料 · 工程施工</h1>
+      <p>剧院｜会议室｜教室｜录音棚｜体育馆｜多功能厅</p>
+      <a href="products.html" class="btn-banner">查看声学产品</a>
     </div>
+  </section>
 
-    <div class="hero-right" aria-hidden="true">
-      <!-- Swiper 轮播（占位 SVG 背景） -->
-      <div class="swiper-container" id="hero-swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide" style="background-image: url('data:image/svg+xml;utf8,<svg xmlns=%%22http://www.w3.org/2000/svg%%22 viewBox=%%220 0 1200 800%%22><rect width=%%22100%%25%%22 height=%%22100%%25%%22 fill=%%22%23d9dee5%%22/><text x=%%2250%%25%%22 y=%%2255%%25%%22 fill=%%22%231e3a56%%22 font-size=%%2280%%22 text-anchor=%%22middle%%22 font-family=%%22Bebas%20Neue%%22>槽木吸音板</text></svg>');"></div>
-
-          <div class="swiper-slide" style="background-image: url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1200 800%22><rect width=%22100%25%22 height=%22100%25%22 fill=%22%23d9dee5%22/><text x=%2250%25%22 y=%2255%25%22 fill=%22%231e3a56%22 font-size=%2280%22 text-anchor=%22middle%22 font-family=%22Bebas%20Neue%22>聚酯纤维吸音板</text></svg>');"></div>
-
-          <div class="swiper-slide" style="background-image: url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1200 800%22><rect width=%22100%25%22 height=%22100%25%22 fill=%22%23d9dee5%22/><text x=%2250%25%22 y=%2255%25%22 fill=%22%231e3a56%22 font-size=%2280%22 text-anchor=%22middle%22 font-family=%22Bebas%20Neue%22>声学工程案例</text></svg>');"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 产品展示 -->
-<section class="section products-section" id="products" aria-labelledby="productsTitle">
-  <div class="container">
-    <h2 id="productsTitle" class="section-heading" data-lang="section_products">精选产品</h2>
-    <div class="product-grid" role="list">
-      <article class="product-card" role="listitem" tabindex="0" onclick="location.href='product-detail.html?id=1'">
-        <img alt="槽木吸音板" src="data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 800 500%22><rect width=%22100%25%22 height=%22100%25%22 fill=%22%23cfd6db%22/><text x=%2250%25%22 y=%2255%25%22 fill=%22%231e3a56%22 font-size=%2234%22 text-anchor=%22middle%22 font-family=%22Bebas%20Neue%22>槽木吸音板</text></svg>">
-        <h3 data-lang="product1_name">槽木吸音板</h3>
-        <p data-lang="product1_short">高性能吸音 · 装饰与声学兼顾 · 适用于影院 / 会议厅。</p>
-      </article>
-
-      <article class="product-card" role="listitem" tabindex="0" onclick="location.href='product-detail.html?id=2'">
-        <img alt="聚酯纤维吸音板" src="data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 800 500%22><rect width=%22100%25%22 height=%22100%25%22 fill=%22%23cfd6db%22/><text x=%2250%25%22 y=%2255%25%22 fill=%22%231e3a56%22 font-size=%2234%22 text-anchor=%22middle%22 font-family=%22Bebas%20Neue%22>聚酯纤维吸音板</text></svg>">
-        <h3 data-lang="product2_name">聚酯纤维吸音板</h3>
-        <p data-lang="product2_short">环保材质 · 吸声效率高 · 适合办公 / 录音棚。</p>
-      </article>
-
-      <article class="product-card" role="listitem" tabindex="0" onclick="location.href='product-detail.html?id=3'">
-        <img alt="穿孔木吸音板" src="data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 800 500%22><rect width=%22100%25%22 height=%22100%25%22 fill=%22%23cfd6db%22/><text x=%2250%25%22 y=%2255%25%22 fill=%22%231e3a56%22 font-size=%2234%22 text-anchor=%22middle%22 font-family=%22Bebas%20Neue%22>穿孔木吸音板</text></svg>">
-        <h3 data-lang="product3_name">穿孔木吸音板</h3>
-        <p data-lang="product3_short">装饰性强 · 孔径可定制 · 适用于剧院 / 音乐厅。</p>
-      </article>
-
-      <article class="product-card" role="listitem" tabindex="0" onclick="location.href='product-detail.html?id=4'">
-        <img alt="减振垫" src="data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 800 500%22><rect width=%22100%25%22 height=%22100%25%22 fill=%22%23cfd6db%22/><text x=%2250%25%22 y=%2255%25%22 fill=%22%231e3a56%22 font-size=%2234%22 text-anchor=%22middle%22 font-family=%22Bebas%20Neue%22>减振垫</text></svg>">
-        <h3 data-lang="product4_name">减振垫 / 隔振板</h3>
-        <p data-lang="product4_short">设备与机械减振 · 提升舒适度与 NVH 性能。</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- 关于我们 -->
-<section class="section about-section" id="about" aria-labelledby="aboutTitle">
-  <div class="container">
-    <h2 id="aboutTitle" class="section-heading" data-lang="section_about">关于我们</h2>
-    <p data-lang="about_text">FUTURE VOICE 专注于声学材料研发与工程，为剧院、会议厅、酒店与高端家庭影院提供从设计、材料到施工的一站式声学解决方案（示例文案）。</p>
-  </div>
-</section>
-
-<!-- 联系 -->
-<section class="section contact-section" id="contact" aria-labelledby="contactTitle">
-  <div class="container">
-    <h2 id="contactTitle" class="section-heading" data-lang="section_contact">联系我们</h2>
-    <div class="contact-grid">
-      <div class="contact-form">
-        <form action="https://formspree.io/f/xpwwqpzy" method="POST">
-          <label><input name="name" placeholder="姓名 / お名前" required></label>
-          <label><input name="email" type="email" placeholder="邮箱 / メール" required></label>
-          <label><textarea name="message" rows="5" placeholder="咨询内容 / お問い合わせ内容" required></textarea></label>
-          <div style="margin-top:10px;">
-            <button type="submit" class="btn-primary" data-lang="send">发送</button>
-          </div>
-        </form>
+  <!-- ========== 产品分类 ========== -->
+  <section class="section product-categories">
+    <h2 class="section-title">声学产品分类</h2>
+    <div class="category-grid">
+      <div class="cat-item" data-aos="zoom-in" data-aos-delay="0">
+        <img src="images/cat1.jpg" alt="吸音板示例" onerror="this.style.display='none'">
+        <h3>吸音板</h3>
       </div>
 
-      <aside class="contact-info" aria-label="contact info">
-        <div class="meta-card">
-          <h4 data-lang="contact_info_title">联系方式</h4>
-          <p><strong data-lang="label_tel">电话：</strong>03-1234-5678</p>
-          <p><strong data-lang="label_addr">地址：</strong>東京都中央区銀座1-2-3</p>
-          <p class="muted" data-lang="contact_note">示例占位：上线前请替换为正式信息。</p>
-        </div>
-      </aside>
-    </div>
-  </div>
-</section>
+      <div class="cat-item" data-aos="zoom-in" data-aos-delay="150">
+        <img src="images/cat2.jpg" alt="扩散体示例" onerror="this.style.display='none'">
+        <h3>扩散体</h3>
+      </div>
 
-<!-- 页脚 -->
-<footer class="site-footer">
-  <div class="container">
+      <div class="cat-item" data-aos="zoom-in" data-aos-delay="300">
+        <img src="images/cat3.jpg" alt="隔音材料示例" onerror="this.style.display='none'">
+        <h3>隔音材料</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 热销产品 ========== -->
+  <section class="section hot-products">
+    <h2 class="section-title">热销产品</h2>
+    <div class="product-grid">
+      <div class="product-card" data-aos="fade-up" data-aos-delay="0">
+        <img src="images/p1.jpg" alt="聚酯纤维吸音板" onerror="this.style.display='none'">
+        <h3>聚酯纤维吸音板</h3>
+        <p>高效吸音 / 防火 / 多色可选</p>
+        <a href="product-detail.html" class="btn-small">查看详情</a>
+      </div>
+
+      <div class="product-card" data-aos="fade-up" data-aos-delay="150">
+        <img src="images/p2.jpg" alt="木质槽孔吸音板" onerror="this.style.display='none'">
+        <h3>木质槽孔吸音板</h3>
+        <p>影院 / 报告厅首选材料</p>
+        <a href="product-detail.html" class="btn-small">查看详情</a>
+      </div>
+
+      <div class="product-card" data-aos="fade-up" data-aos-delay="300">
+        <img src="images/p3.jpg" alt="木质扩散体" onerror="this.style.display='none'">
+        <h3>木质扩散体</h3>
+        <p>改善声场扩散效果</p>
+        <a href="product-detail.html" class="btn-small">查看详情</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 工程案例 ========== -->
+  <section class="section cases">
+    <h2 class="section-title">工程案例</h2>
+    <div class="case-grid">
+      <div class="case-item" data-aos="fade-right" data-aos-delay="0">
+        <img src="images/case1.jpg" alt="案例1" onerror="this.style.display='none'">
+        <h3>某市文化剧院声学设计</h3>
+      </div>
+
+      <div class="case-item" data-aos="fade-right" data-aos-delay="150">
+        <img src="images/case2.jpg" alt="案例2" onerror="this.style.display='none'">
+        <h3>大学多功能厅吸音改造</h3>
+      </div>
+
+      <div class="case-item" data-aos="fade-right" data-aos-delay="300">
+        <img src="images/case3.jpg" alt="案例3" onerror="this.style.display='none'">
+        <h3>会议中心声场改善工程</h3>
+      </div>
+    </div>
+
+    <div class="center" style="margin-top:28px;">
+      <a href="cases.html" class="btn-main">查看更多工程案例</a>
+    </div>
+  </section>
+
+  <!-- ========== 关于我们 ========== -->
+  <section class="section about" data-aos="fade-up">
+    <h2 class="section-title">关于我们</h2>
+    <p class="about-text">
+      某某声学科技有限公司专注于声学环境设计、声学材料研发与工程实施。我们提供从声学测量、设计、
+      材料供应到现场施工的一站式服务，适用场景包括剧院、会议厅、学校、录音棚与体育馆等。
+    </p>
+
+    <div class="center" style="margin-top:22px;">
+      <a href="contact.html" class="btn-main">联系我们</a>
+    </div>
+  </section>
+<script src="main.js"></script>
+
+<footer class="global-footer" data-aos="fade-up">
     <div class="footer-inner">
-      <p>&copy; <span id="year"></span> FUTURE VOICE（示例） · All rights reserved.</p>
-    </div>
-  </div>
-</footer>
+        
+        <div class="footer-section">
+            <h4>会社情報</h4>
+            <p>（仮）Your Company 日本法人</p>
+            <p>東京都〇〇区〇〇 1-2-3</p>
+            <p>TEL : 03-1234-5678</p>
+        </div>
 
-<!-- 引入 Swiper & 主 JS（我随后会发 js/main.js） -->
-<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-<script src="js/main.js"></script>
+        <div class="footer-section">
+            <h4>メニュー</h4>
+            <a href="index.html">ホーム</a>
+            <a href="about.html">会社案内</a>
+            <a href="products.html">製品一覧</a>
+            <a href="contact.html">お問い合わせ</a>
+        </div>
+
+        <div class="footer-section">
+            <h4>営業時間</h4>
+            <p>平日 10:00〜18:00</p>
+            <p>土日祝 定休</p>
+        </div>
+
+        <div class="footer-section">
+            <h4>Follow Us</h4>
+            <p>SNS（準備中）</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2025 Your Company. All rights reserved.
+    </div>
+</footer>
+<!-- AOS 动画脚本 -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 800,   // 动画时间
+        easing: 'ease-out-quart', // 渐变曲线
+        once: true       // 滚动一次后是否保持效果（企业站建议 true）
+    });
+</script>
+
 </body>
 </html>
