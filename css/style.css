@@ -1,173 +1,377 @@
-/* ===== 全局：冷银金属主题 ===== */
+/* 全局基础设置 */
 body {
     margin: 0;
-    font-family: "Helvetica Neue", Arial, sans-serif;
-    color: #1a1a1a;
-    background: linear-gradient(135deg, #f3f4f7, #d9dee5);
-    background-attachment: fixed;
+    font-family: "Microsoft YaHei", sans-serif;
+    background: #f7f7f7;
+    color: #333;
 }
 
-/* 金属拉丝纹理（柔和 B 强度） */
-body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background: 
-        repeating-linear-gradient(
-            90deg,
-            rgba(255,255,255,0.07) 0px,
-            rgba(255,255,255,0.07) 1px,
-            transparent 2px,
-            transparent 4px
-        );
-    pointer-events: none;
-    z-index: -1;
+/* ========== 头部 Header ========== */
+.site-header {
+    background: #ffffff;
+    border-bottom: 2px solid #e5e5e5;
 }
 
-/* ===== Header ===== */
-header {
-    background: rgba(255,255,255,0.6);
-    backdrop-filter: blur(8px);
-    border-bottom: 1px solid rgba(150,150,150,0.4);
-    padding: 15px 5%;
+.header-inner {
+    max-width: 1200px;
+    margin: auto;
     display: flex;
+    align-items: center;
     justify-content: space-between;
+    padding: 15px 10px;
+}
+
+.logo {
+    display: flex;
     align-items: center;
 }
 
-.logo-container h1 {
-    margin: 0;
-    font-size: 20px;
-    color: #2b78ff;
-    text-shadow: 0 0 10px rgba(43,120,255,0.4);
+.logo img {
+    height: 60px;
+    margin-right: 12px;
 }
 
-nav ul {
+.logo-text .cn {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.logo-text .jp {
+    font-size: 14px;
+    color: #666;
+}
+
+.hotline {
+    font-size: 15px;
+}
+
+.hotline-number {
+    color: #e60000;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* ========== 导航栏 Nav ========== */
+nav {
+    background: #ffffff;
+    border-top: 1px solid #eee;
+    border-bottom: 3px solid #d40000;
+}
+
+.nav-bar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0;
     list-style: none;
     display: flex;
-    gap: 25px;
+}
+
+.nav-bar > li {
+    position: relative;
+}
+
+.nav-bar > li > a {
+    display: block;
+    padding: 16px 26px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    border-right: 1px solid #f0f0f0;
+}
+
+.nav-bar > li > a:hover,
+.nav-bar > li:hover > a {
+    background: #d40000;
+    color: white;
+}
+
+/* -------- 下拉菜单 -------- */
+.dropdown-menu {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    list-style: none;
     margin: 0;
     padding: 0;
+    background: white;
+    width: 160px;
+    border: 1px solid #ddd;
+    border-top: none;
+    display: none;
+    z-index: 20;
 }
 
-nav a {
+.dropdown-menu li a {
+    display: block;
+    padding: 12px 16px;
     text-decoration: none;
-    color: #334;
-    font-weight: 600;
-    transition: 0.3s;
+    color: #444;
+    border-bottom: 1px solid #f3f3f3;
+    font-size: 14px;
 }
 
-nav a:hover {
-    color: #2b78ff;
+.dropdown-menu li a:hover {
+    background: #f8f8f8;
+    color: #d40000;
 }
 
-/* ===== Hero ===== */
-.hero {
-    height: 60vh;
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* ========== Banner 大横幅 ========== */
+.banner {
+    background: url('images/banner.jpg') center/cover no-repeat;
+    height: 380px;
     display: flex;
     align-items: center;
-    padding: 0 10%;
-    background: linear-gradient(135deg, #e6e8ec, #cbd2dc);
-    border-bottom: 1px solid rgba(120,130,150,0.3);
-}
-
-.hero-text h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
-    color: #2b2f36;
-}
-
-.hero-text h2 {
-    font-size: 20px;
-    margin-bottom: 25px;
-    color: #4a5060;
-}
-
-.btn-primary {
-    display: inline-block;
-    padding: 12px 30px;
-    background: #2b78ff;
     color: white;
-    border-radius: 6px;
-    font-weight: bold;
+    text-shadow: 1px 1px 6px black;
+}
+
+.banner-text {
+    margin-left: 10%;
+}
+
+.banner-text h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.btn-banner {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #d40000;
+    color: white;
     text-decoration: none;
-    transition: 0.25s;
-    box-shadow: 0 4px 15px rgba(43,120,255,0.3);
+    border-radius: 4px;
 }
 
-.btn-primary:hover {
-    background: #1f5fd6;
+/* ========== 公共布局 Section ========== */
+.section {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 10px;
 }
 
-/* ===== 产品区块 ===== */
-.products {
-    padding: 60px 10%;
-    text-align: center;
+.section-title {
+    font-size: 26px;
+    margin-bottom: 20px;
+    border-left: 5px solid #d40000;
+    padding-left: 10px;
 }
 
-.products h2 {
-    font-size: 32px;
-    margin-bottom: 40px;
-    color: #2b2f36;
+/* ========== 分类 ICON ========== */
+.category-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
 }
 
+.cat-item img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+/* ========== 产品卡片 ========== */
 .product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-    gap: 30px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
 }
 
 .product-card {
-    background: linear-gradient(145deg, #f7f8fa, #dce1e8);
-    border-radius: 16px;
-    padding: 25px;
-    transition: 0.25s;
-    border: 1px solid rgba(150,150,150,0.3);
-    box-shadow: 0 6px 18px rgba(100,120,150,0.15);
-}
-
-.product-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 25px rgba(80,110,150,0.25);
+    background: white;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.08);
+    text-align: center;
 }
 
 .product-card img {
     width: 100%;
-    border-radius: 12px;
-    margin-bottom: 15px;
 }
 
-.product-card h3 {
-    font-size: 20px;
-    margin-bottom: 8px;
-    color: #2b2f36;
+.btn-small {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 8px 14px;
+    background: #d40000;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
 }
 
-.product-card p {
+/* ========== 工程案例 ========== */
+.case-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.case-item img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.btn-main {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #d40000;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.center {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* ========== 关于我们 ========== */
+.about-text {
+    font-size: 15px;
+    line-height: 1.8;
     color: #555;
 }
-
-/* ===== CTA 区块 ===== */
-.cta {
-    padding: 60px 10%;
-    text-align: center;
+/* ======= 手机端汉堡菜单按钮 ======= */
+.mobile-menu-btn {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 6px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 1000;
 }
 
-.cta h2 {
-    font-size: 32px;
-    margin-bottom: 15px;
+.mobile-menu-btn span {
+    width: 28px;
+    height: 3px;
+    background: #b70000;  /* 企业红 */
+    border-radius: 3px;
+    transition: 0.3s;
 }
 
-.cta p {
-    color: #444;
+/* 菜单打开时的动画效果 */
+.mobile-menu-btn.active span:nth-child(1) {
+    transform: rotate(45deg) translateY(10px);
 }
 
-/* ===== Footer ===== */
-footer {
-    background: #c9cfd8;
-    padding: 20px 10%;
-    text-align: center;
-    margin-top: 50px;
+.mobile-menu-btn.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-btn.active span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-10px);
+}
+
+/* ======= 手机端导航栏 ======= */
+@media(max-width: 900px) {
+
+    nav {
+        display: none;
+        width: 100%;
+        background: white;
+        border-top: 1px solid #ddd;
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    .nav-bar {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    .nav-bar li {
+        width: 100%;
+        text-align: center;
+        padding: 12px 0;
+        border-bottom: 1px solid #eee;
+    }
+
+    .dropdown-menu {
+        position: static;
+        display: none !important;
+        box-shadow: none;
+        background: #f5f5f5;
+        margin-top: 0;
+        border-radius: 0;
+        padding: 10px 0;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: none; /* 手机端不使用 hover */
+    }
+
+    /* 手机端点击展开二级菜单 */
+    .dropdown.open > .dropdown-menu {
+        display: block !important;
+    }
+
+    /* 显示汉堡按钮 */
+    .mobile-menu-btn {
+        display: flex;
+    }
+}
+/* ======= GLOBAL FOOTER ======= */
+.global-footer {
+    background: #f8f8f8; /* 企业白 */
+    border-top: 3px solid #d80000; /* 企业红 */
+    padding: 40px 20px 20px;
+    margin-top: 60px;
     color: #333;
-    border-top: 1px solid rgba(120,120,120,0.4);
+    font-size: 15px;
+}
+
+.footer-inner {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+.footer-section h4 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #d80000; /* 企业红 */
+    font-weight: bold;
+}
+
+.footer-section p,
+.footer-section a {
+    line-height: 1.8;
+    color: #333;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    color: #d80000;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #ccc;
+    font-size: 14px;
+    color: #666;
+}
+
+/* 手机端 */
+@media (max-width: 768px) {
+    .footer-inner {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-inner {
+        grid-template-columns: 1fr;
+    }
 }

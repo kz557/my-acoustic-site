@@ -1,64 +1,139 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>产品一览 | 公司名称 / 企業名</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>声学产品｜某某声学科技有限公司</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-<header>
-    <div class="logo-container">
-        <h1>公司名称 / 企業名</h1>
+<header class="site-header">
+    <div class="header-inner">
+        <div class="logo">
+            <img src="images/logo.png" alt="logo">
+            <div class="logo-text">
+                <div class="cn">某某声学科技有限公司</div>
+                <div class="jp">サウンドアコースティック株式会社</div>
+            </div>
+        </div>
+
+        <div class="hotline">
+            日本咨询热线：<span class="hotline-number">03-1234-5678</span>
+        </div>
     </div>
+
+    <!-- 手机端汉堡菜单按钮 -->
+    <div class="mobile-menu-btn" id="mobile-menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- 导航栏 -->
     <nav>
-        <ul>
-            <li><a href="index.html">首页 / ホーム</a></li>
-            <li><a href="products.html">产品一览 / 製品一覧</a></li>
-            <li><a href="contact.html">联系我们 / お問い合わせ</a></li>
+        <ul class="nav-bar">
+            <li><a href="index.html">首页</a></li>
+
+            <li class="dropdown">
+                <a href="#">声学设计</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">剧院声学</a></li>
+                    <li><a href="#">会议室声学</a></li>
+                    <li><a href="#">录音棚声学</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#">声学产品</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">吸音板</a></li>
+                    <li><a href="#">扩散体</a></li>
+                    <li><a href="#">隔音材料</a></li>
+                </ul>
+            </li>
+
+            <li><a href="cases.html">工程案例</a></li>
+
+            <li class="dropdown">
+                <a href="#">资讯中心</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">新闻资讯</a></li>
+                    <li><a href="#">行业动态</a></li>
+                    <li><a href="#">常见问题</a></li>
+                </ul>
+            </li>
+
+            <li><a href="contact.html">联系我们</a></li>
         </ul>
     </nav>
 </header>
 
-<section class="products">
-    <h2>产品一览 / 製品一覧</h2>
+<!-- 产品列表 -->
+<section class="section">
+    <h2 class="section-title">声学产品</h2>
 
     <div class="product-grid">
-
-        <!-- 产品1 -->
         <div class="product-card">
-            <img src="images/product1.jpg" alt="音箱 A1 Pro">
-            <h3>智能音箱 A1 Pro / スピーカー A1 Pro</h3>
-            <p>高性能音质、低噪声处理。适合家庭与办公室使用。</p>
-            <p>高性能サウンド・低ノイズ処理。家庭やオフィスに最適。</p>
-            <a class="btn-primary" href="product-detail.html">查看详情 / 詳細を見る</a>
+            <img src="images/p1.jpg" alt="">
+            <h3>聚酯纤维吸音板</h3>
+            <p>高吸音、防火、多色可选</p>
+            <a class="btn-small" href="product-detail.html">查看详情</a>
         </div>
 
-        <!-- 产品2 -->
         <div class="product-card">
-            <img src="images/product2.jpg" alt="家庭影院 C5">
-            <h3>家庭影院 C5 / ホームシアター C5</h3>
-            <p>沉浸式声场，支持多声道输入。</p>
-            <p>没入型サウンド、マルチチャンネル対応。</p>
-            <a class="btn-primary" href="product-detail.html">查看详情 / 詳細を見る</a>
+            <img src="images/p2.jpg" alt="">
+            <h3>木质槽孔吸音板</h3>
+            <p>影院 / 报告厅专用</p>
+            <a class="btn-small" href="product-detail.html">查看详情</a>
         </div>
 
-        <!-- 产品3 -->
         <div class="product-card">
-            <img src="images/product3.jpg" alt="迷你音响 S-Mini">
-            <h3>迷你音响 S-Mini / ミニスピーカー S-Mini</h3>
-            <p>小型机身，大能量输出。</p>
-            <p>コンパクトでもパワフルな音質。</p>
-            <a class="btn-primary" href="product-detail.html">查看详情 / 詳細を見る</a>
+            <img src="images/p3.jpg" alt="">
+            <h3>木质扩散体</h3>
+            <p>提升声场扩散效果</p>
+            <a class="btn-small" href="product-detail.html">查看详情</a>
+        </div>
+    </div>
+</section>
+
+<script src="main.js"></script>
+
+<footer class="global-footer">
+    <div class="footer-inner">
+        
+        <div class="footer-section">
+            <h4>会社情報</h4>
+            <p>（仮）Your Company 日本法人</p>
+            <p>東京都〇〇区〇〇 1-2-3</p>
+            <p>TEL : 03-1234-5678</p>
+        </div>
+
+        <div class="footer-section">
+            <h4>メニュー</h4>
+            <a href="index.html">ホーム</a>
+            <a href="about.html">会社案内</a>
+            <a href="products.html">製品一覧</a>
+            <a href="contact.html">お問い合わせ</a>
+        </div>
+
+        <div class="footer-section">
+            <h4>営業時間</h4>
+            <p>平日 10:00〜18:00</p>
+            <p>土日祝 定休</p>
+        </div>
+
+        <div class="footer-section">
+            <h4>Follow Us</h4>
+            <p>SNS（準備中）</p>
         </div>
 
     </div>
 
-</section>
-
-<footer>
-    <p>© 2025 公司名称 / 企業名 — 日本示例地址：東京都千代田区1-1 — 电话：03-1234-5678</p>
+    <div class="footer-bottom">
+        © 2025 Your Company. All rights reserved.
+    </div>
 </footer>
 
 </body>

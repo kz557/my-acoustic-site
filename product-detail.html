@@ -1,87 +1,125 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>商品详情 / 製品詳細</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>产品详情｜某某声学科技有限公司</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-<header>
-    <div class="logo-container">
-        <h1>公司名称 / 企業名</h1>
+<header class="site-header">
+    <div class="header-inner">
+        <div class="logo">
+            <img src="images/logo.png" alt="logo">
+            <div class="logo-text">
+                <div class="cn">某某声学科技有限公司</div>
+                <div class="jp">サウンドアコースティック株式会社</div>
+            </div>
+        </div>
+
+        <div class="hotline">
+            日本咨询热线：<span class="hotline-number">03-1234-5678</span>
+        </div>
     </div>
+
+    <div class="mobile-menu-btn" id="mobile-menu-btn">
+        <span></span><span></span><span></span>
+    </div>
+
     <nav>
-        <ul>
-            <li><a href="index.html">首页 / ホーム</a></li>
-            <li><a href="products.html">产品一览 / 製品一覧</a></li>
-            <li><a href="contact.html">联系我们 / お問い合わせ</a></li>
+        <ul class="nav-bar">
+            <li><a href="index.html">首页</a></li>
+
+            <li class="dropdown">
+                <a href="#">声学设计</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">剧院声学</a></li>
+                    <li><a href="#">会议室声学</a></li>
+                    <li><a href="#">录音棚声学</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#">声学产品</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">吸音板</a></li>
+                    <li><a href="#">扩散体</a></li>
+                    <li><a href="#">隔音材料</a></li>
+                </ul>
+            </li>
+
+            <li><a href="cases.html">工程案例</a></li>
+            <li><a href="contact.html">联系我们</a></li>
         </ul>
     </nav>
 </header>
 
-<section class="products">
-    <h2>产品详情 / 製品詳細</h2>
+<section class="section product-detail">
 
-    <div class="product-grid" style="grid-template-columns: 1fr 1fr;">
+    <div class="detail-wrapper">
 
-        <!-- 左侧：产品图片 -->
-        <div>
-            <img src="images/product1.jpg" alt="产品图片" style="width:100%; border-radius:16px;">
+        <div class="detail-image">
+            <img src="images/p1.jpg" alt="">
         </div>
 
-        <!-- 右侧：产品信息 -->
-        <div style="padding: 10px 20px;">
-
-            <h3>智能音箱 A1 Pro / スピーカー A1 Pro</h3>
-
-            <p style="font-size:16px; margin-top:15px;">
-                一款为音质爱好者设计的高性能音箱，采用低噪声电路与高清驱动单元。
-                适用于家庭客厅、办公空间、工作室等多场景使用。
+        <div class="detail-info">
+            <h2>聚酯纤维吸音板</h2>
+            <p>
+                用于会议室、影院、录音棚等空间。  
+                具备环保、防火、色彩丰富等特点。
             </p>
 
-            <p style="font-size:16px; margin-top:10px;">
-                高音質を求めるユーザーのために設計された高性能スピーカー。
-                低ノイズ回路と高精細ドライバーを搭載し、家庭、オフィス、スタジオなどに最適です。
-            </p>
-
-            <h4 style="margin-top:25px;">产品特点 / 特長</h4>
-            <ul style="line-height:1.8; margin-left:-10px;">
-                <li>高清驱动单元 — 清晰细节表现</li>
-                <li>低噪声电路设计 — 持续稳定输出</li>
-                <li>支持蓝牙与 AUX 双模式</li>
-                <li>适用于多场景：家庭、办公室、录音工作室</li>
-                <li>节能待机模式</li>
-            </ul>
-
-            <ul style="line-height:1.8; margin-left:-10px;">
-                <li>高精細ドライバー搭載</li>
-                <li>低ノイズ回路設計</li>
-                <li>Bluetooth / AUX対応</li>
-                <li>家庭・オフィス・スタジオに最適</li>
-                <li>省エネスタンバイモード</li>
-            </ul>
-
-            <h4 style="margin-top:25px;">规格参数 / 仕様</h4>
-            <table style="width:100%; border-collapse: collapse; margin-top: 10px;">
-                <tr><td>输出功率</td><td>40W</td></tr>
-                <tr><td>频率响应</td><td>50Hz - 20kHz</td></tr>
-                <tr><td>输入方式</td><td>Bluetooth / AUX</td></tr>
-                <tr><td>尺寸</td><td>180 × 120 × 220 mm</td></tr>
-                <tr><td>重量</td><td>1.8 kg</td></tr>
+            <table class="spec-table">
+                <tr><td>材料</td><td>100% 聚酯纤维</td></tr>
+                <tr><td>尺寸</td><td>1220×2420 mm</td></tr>
+                <tr><td>厚度</td><td>9mm / 12mm / 24mm</td></tr>
+                <tr><td>防火等级</td><td>B1</td></tr>
             </table>
 
-            <a class="btn-primary" href="products.html" style="margin-top:30px; display:inline-block;">
-                返回产品列表 / 製品一覧へ戻る
-            </a>
+            <a href="contact.html" class="btn-main">咨询报价</a>
         </div>
-    </div>
 
+    </div>
 </section>
 
-<footer>
-    <p>© 2025 公司名称 / 企業名 — 日本示例地址：東京都千代田区1-1 — 电话：03-1234-5678</p>
+<script src="main.js"></script>
+
+<footer class="global-footer">
+    <div class="footer-inner">
+        
+        <div class="footer-section">
+            <h4>会社情報</h4>
+            <p>（仮）Your Company 日本法人</p>
+            <p>東京都〇〇区〇〇 1-2-3</p>
+            <p>TEL : 03-1234-5678</p>
+        </div>
+
+        <div class="footer-section">
+            <h4>メニュー</h4>
+            <a href="index.html">ホーム</a>
+            <a href="about.html">会社案内</a>
+            <a href="products.html">製品一覧</a>
+            <a href="contact.html">お問い合わせ</a>
+        </div>
+
+        <div class="footer-section">
+            <h4>営業時間</h4>
+            <p>平日 10:00〜18:00</p>
+            <p>土日祝 定休</p>
+        </div>
+
+        <div class="footer-section">
+            <h4>Follow Us</h4>
+            <p>SNS（準備中）</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2025 Your Company. All rights reserved.
+    </div>
 </footer>
 
 </body>

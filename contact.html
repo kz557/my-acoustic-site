@@ -1,72 +1,120 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>联系我们 / お問い合わせ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系我们｜某某声学科技有限公司</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-<header>
-    <div class="logo-container">
-        <h1>公司名称 / 企業名</h1>
+<header class="site-header">
+    <div class="header-inner">
+        <div class="logo">
+            <img src="images/logo.png" alt="logo">
+            <div class="logo-text">
+                <div class="cn">某某声学科技有限公司</div>
+                <div class="jp">サウンドアコースティック株式会社</div>
+            </div>
+        </div>
+
+        <div class="hotline">
+            日本咨询热线：<span class="hotline-number">03-1234-5678</span>
+        </div>
     </div>
+
+    <div class="mobile-menu-btn" id="mobile-menu-btn">
+        <span></span><span></span><span></span>
+    </div>
+
     <nav>
-        <ul>
-            <li><a href="index.html">首页 / ホーム</a></li>
-            <li><a href="products.html">产品一览 / 製品一覧</a></li>
-            <li><a href="contact.html">联系我们 / お問い合わせ</a></li>
+        <ul class="nav-bar">
+            <li><a href="index.html">首页</a></li>
+
+            <li class="dropdown">
+                <a href="#">声学设计</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">剧院声学</a></li>
+                    <li><a href="#">会议室声学</a></li>
+                    <li><a href="#">录音棚声学</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#">声学产品</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">吸音板</a></li>
+                    <li><a href="#">扩散体</a></li>
+                    <li><a href="#">隔音材料</a></li>
+                </ul>
+            </li>
+
+            <li><a href="cases.html">工程案例</a></li>
+            <li><a href="contact.html">联系我们</a></li>
         </ul>
     </nav>
 </header>
 
-<section class="products">
-    <h2>联系我们 / お問い合わせ</h2>
+<section class="section contact-page">
+    <h2 class="section-title">联系我们</h2>
 
-    <div style="max-width:700px; margin:0 auto;">
+    <div class="contact-wrapper">
 
-        <p style="text-align:center; font-size:16px; margin-bottom:30px;">
-            如有任何问题，欢迎随时与我们联系。<br>
-            ご質問などございましたら、お気軽にお問い合わせください。
-        </p>
-
-        <!-- 联系表单 -->
-        <form style="background: linear-gradient(145deg, #f7f8fa, #dce1e8); 
-                     border: 1px solid rgba(150,150,150,0.3);
-                     padding: 30px;
-                     border-radius: 16px;
-                     box-shadow: 0 6px 18px rgba(120,130,150,0.2);">
-
-            <label>姓名 / お名前</label><br>
-            <input type="text" style="width:100%; padding:10px; margin:10px 0 20px; border-radius:8px; border:1px solid #aaa;">
-
-            <label>电子邮件 / メールアドレス</label><br>
-            <input type="email" style="width:100%; padding:10px; margin:10px 0 20px; border-radius:8px; border:1px solid #aaa;">
-
-            <label>留言内容 / お問い合わせ内容</label><br>
-            <textarea style="width:100%; padding:10px; height:150px; margin:10px 0 20px; border-radius:8px; border:1px solid #aaa;"></textarea>
-
-            <button class="btn-primary" style="width:100%; padding:12px 0; font-size:16px;">
-                发送 / 送信
-            </button>
-        </form>
-
-        <!-- 联系方式 -->
-        <div style="margin-top:40px; text-align:center;">
-            <h3>联系方式 / 連絡先</h3>
-            <p>
-                日本示例地址：東京都千代田区1-1<br>
-                電話：03-1234-5678<br>
-                邮箱：info@example.com
-            </p>
+        <div class="contact-info">
+            <p><strong>公司名称：</strong>某某声学科技有限公司</p>
+            <p><strong>日本地址：</strong>東京都港区1-2-3 示例ビル</p>
+            <p><strong>电话：</strong>03-1234-5678</p>
+            <p><strong>邮箱：</strong>info@example.com</p>
         </div>
+
+        <form class="contact-form">
+            <input type="text" placeholder="姓名">
+            <input type="text" placeholder="电话">
+            <input type="text" placeholder="公司名">
+            <textarea placeholder="留言内容"></textarea>
+            <button class="btn-main" type="submit">提交</button>
+        </form>
 
     </div>
 </section>
 
-<footer>
-    <p>© 2025 公司名称 / 企業名 — 日本示例地址：東京都千代田区1-1 — 电话：03-1234-5678</p>
+<script src="main.js"></script>
+
+<footer class="global-footer">
+    <div class="footer-inner">
+        
+        <div class="footer-section">
+            <h4>会社情報</h4>
+            <p>（仮）Your Company 日本法人</p>
+            <p>東京都〇〇区〇〇 1-2-3</p>
+            <p>TEL : 03-1234-5678</p>
+        </div>
+
+        <div class="footer-section">
+            <h4>メニュー</h4>
+            <a href="index.html">ホーム</a>
+            <a href="about.html">会社案内</a>
+            <a href="products.html">製品一覧</a>
+            <a href="contact.html">お問い合わせ</a>
+        </div>
+
+        <div class="footer-section">
+            <h4>営業時間</h4>
+            <p>平日 10:00〜18:00</p>
+            <p>土日祝 定休</p>
+        </div>
+
+        <div class="footer-section">
+            <h4>Follow Us</h4>
+            <p>SNS（準備中）</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2025 Your Company. All rights reserved.
+    </div>
 </footer>
 
 </body>
