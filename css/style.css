@@ -1,199 +1,173 @@
-/* ====== GLOBAL RESET ====== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* ====== DARK METAL BACKGROUND (Strength B) ====== */
+/* ===== 全局：冷银金属主题 ===== */
 body {
-  margin: 0;
-  font-family: 'Roboto', 'Noto Sans JP', sans-serif;
-
-  /* --- 暗金属多层纹理 --- */
-  background:
-    /* 柔光金属反射区域 */
-    radial-gradient(circle at 25% 20%, rgba(255,255,255,0.08) 0%, rgba(0,0,0,0) 45%),
-    radial-gradient(circle at 70% 80%, rgba(255,255,255,0.05) 0%, rgba(0,0,0,0) 50%),
-
-    /* 金属拉丝效果 - 关键 */
-    linear-gradient(115deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.01) 40%, rgba(0,0,0,0.1) 100%),
-
-    /* 深钛金属底色 */
-    linear-gradient(135deg, #3d4146 0%, #2b2d31 50%, #222325 100%);
-
-  background-attachment: fixed;
-  color: #e8ebef;
-  -webkit-font-smoothing: antialiased;
-  letter-spacing: 0.3px;
+    margin: 0;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    color: #1a1a1a;
+    background: linear-gradient(135deg, #f3f4f7, #d9dee5);
+    background-attachment: fixed;
 }
 
-/* ====== HEADER ====== */
+/* 金属拉丝纹理（柔和 B 强度） */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: 
+        repeating-linear-gradient(
+            90deg,
+            rgba(255,255,255,0.07) 0px,
+            rgba(255,255,255,0.07) 1px,
+            transparent 2px,
+            transparent 4px
+        );
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* ===== Header ===== */
 header {
-  width: 100%;
-  padding: 20px 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  background: rgba(20,20,22,0.55);
-  backdrop-filter: blur(6px);
-  border-bottom: 1px solid rgba(255,255,255,0.05);
+    background: rgba(255,255,255,0.6);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(150,150,150,0.4);
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-header .logo {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+.logo-container h1 {
+    margin: 0;
+    font-size: 20px;
+    color: #2b78ff;
+    text-shadow: 0 0 10px rgba(43,120,255,0.4);
 }
 
-header .logo img {
-  height: 42px;
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
 }
 
-header nav a {
-  margin-left: 25px;
-  text-decoration: none;
-  color: #e8ebef;
-  font-size: 15px;
-  transition: 0.25s ease;
+nav a {
+    text-decoration: none;
+    color: #334;
+    font-weight: 600;
+    transition: 0.3s;
 }
 
-header nav a:hover {
-  color: #7cc4ff;
+nav a:hover {
+    color: #2b78ff;
 }
 
-/* ===== HERO SECTION ===== */
+/* ===== Hero ===== */
 .hero {
-  padding: 140px 50px;
-  text-align: center;
-  color: #ffffff;
-
-  background:
-    linear-gradient(to bottom right, rgba(50,60,70,0.25), rgba(20,22,24,0.35)),
-    url('https://images.unsplash.com/photo-1525286116112-b59af11adad1?auto=format&fit=crop&w=1600&q=80')
-    center/cover no-repeat;
-  border-bottom: 1px solid rgba(255,255,255,0.05);
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    background: linear-gradient(135deg, #e6e8ec, #cbd2dc);
+    border-bottom: 1px solid rgba(120,130,150,0.3);
 }
 
-.hero h1 {
-  font-size: 52px;
-  font-weight: 700;
-  text-shadow: 0 0 18px rgba(0,0,0,0.6);
+.hero-text h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    color: #2b2f36;
 }
 
-.hero p {
-  font-size: 18px;
-  margin-top: 20px;
-  color: #c7ccd2;
+.hero-text h2 {
+    font-size: 20px;
+    margin-bottom: 25px;
+    color: #4a5060;
 }
 
-/* ===== BUTTONS ===== */
 .btn-primary {
-  display: inline-block;
-  margin-top: 30px;
-  padding: 12px 35px;
-  border-radius: 6px;
-  font-size: 16px;
-  font-weight: 500;
-  text-decoration: none;
-
-  background: linear-gradient(135deg, #4978ff 0%, #6ab6ff 100%);
-  color: #ffffff;
-  transition: 0.25s;
-  box-shadow: 0 0 12px rgba(70,120,255,0.25);
+    display: inline-block;
+    padding: 12px 30px;
+    background: #2b78ff;
+    color: white;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.25s;
+    box-shadow: 0 4px 15px rgba(43,120,255,0.3);
 }
 
 .btn-primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 0 18px rgba(120,160,255,0.45);
+    background: #1f5fd6;
 }
 
-/* ===== PRODUCT GRID ===== */
-.product-section {
-  padding: 80px 60px;
+/* ===== 产品区块 ===== */
+.products {
+    padding: 60px 10%;
+    text-align: center;
+}
+
+.products h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #2b2f36;
 }
 
 .product-grid {
-  display: grid;
-  gap: 40px;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 30px;
 }
 
 .product-card {
-  background: rgba(40,42,45,0.45);
-  padding: 20px;
-  border-radius: 12px;
-  transition: 0.3s ease;
-  border: 1px solid rgba(255,255,255,0.06);
-  backdrop-filter: blur(4px);
+    background: linear-gradient(145deg, #f7f8fa, #dce1e8);
+    border-radius: 16px;
+    padding: 25px;
+    transition: 0.25s;
+    border: 1px solid rgba(150,150,150,0.3);
+    box-shadow: 0 6px 18px rgba(100,120,150,0.15);
 }
 
 .product-card:hover {
-  transform: translateY(-6px);
-  border-color: #6ab6ff;
-  box-shadow: 0 0 25px rgba(120,160,255,0.2);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(80,110,150,0.25);
 }
 
 .product-card img {
-  width: 100%;
-  border-radius: 8px;
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 15px;
 }
 
 .product-card h3 {
-  margin-top: 15px;
-  font-size: 20px;
-  color: #ffffff;
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: #2b2f36;
 }
 
 .product-card p {
-  margin-top: 8px;
-  color: #caced3;
-  font-size: 14px;
+    color: #555;
 }
 
-/* ===== PRODUCT DETAIL ===== */
-.product-detail {
-  padding: 100px 60px;
-  display: flex;
-  gap: 60px;
+/* ===== CTA 区块 ===== */
+.cta {
+    padding: 60px 10%;
+    text-align: center;
 }
 
-.product-detail img {
-  width: 480px;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(255,255,255,0.07);
+.cta h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
 }
 
-.product-detail .info {
-  max-width: 500px;
+.cta p {
+    color: #444;
 }
 
-.product-detail h1 {
-  font-size: 42px;
-  color: #ffffff;
-}
-
-.product-detail p {
-  margin-top: 20px;
-  font-size: 16px;
-  color: #caced2;
-  line-height: 1.7;
-}
-
-.product-detail .price {
-  margin-top: 25px;
-  font-size: 26px;
-  color: #82b7ff;
-  font-weight: bold;
-}
-
-/* ===== FOOTER ===== */
+/* ===== Footer ===== */
 footer {
-  margin-top: 80px;
-  padding: 40px 60px;
-  background: rgba(25,25,27,0.6);
-  border-top: 1px solid rgba(255,255,255,0.05);
-  color: #c4c8cc;
-  text-align: center;
+    background: #c9cfd8;
+    padding: 20px 10%;
+    text-align: center;
+    margin-top: 50px;
+    color: #333;
+    border-top: 1px solid rgba(120,120,120,0.4);
 }
